@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Red hat";
+  src: url("/fonts/static/RedHatText-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Red hat semi-bold";
+  src: url("/fonts/static/RedHatText-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Red hat bold";
+  src: url("/fonts/static/RedHatText-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: "Red Hat";
+}
