@@ -23,9 +23,11 @@ export default function DessertItem({ image, name, category, price, windowWidth 
         <img src={`/images/${imageUrl}`} alt={name} className={amount > 0 ? imageBorder : undefined} />
         {amount === 0 ? <AddToCartBtn name={name} price={price} /> : <OrangeBtn amount={amount} name={name} />}
       </div>
-      <p>{category}</p>
-      <h3>{name}</h3>
-      <p>${priceValue}</p>
+      <div>
+        <p>{category}</p>
+        <p>{name}</p>
+        <p>${priceValue}</p>
+      </div>
     </div>
   );
 }
@@ -33,15 +35,21 @@ export default function DessertItem({ image, name, category, price, windowWidth 
 const dessertItemStyle = css`
   margin-bottom: 1em;
 
-  h3 {
-    font-family: "Red hat semi-bold";
-    line-height: 0;
-    color: ${rose900};
-  }
+  div:last-child {
+    > p:first-child {
+      color: ${rose500};
+    }
 
-  > p:last-child {
-    font-family: "Red hat semi-bold";
-    color: ${red};
+    > p:nth-child(2) {
+      font-family: "Red hat semi-bold";
+      line-height: 0;
+      color: ${rose900};
+    }
+
+    > p:last-child {
+      font-family: "Red hat semi-bold";
+      color: ${red};
+    }
   }
 `;
 
@@ -53,10 +61,6 @@ const upperDessertContent = css`
     width: 18em;
     border-radius: 0.5em;
     margin-bottom: 1.5em;
-  }
-
-  + p {
-    color: ${rose500};
   }
 `;
 
