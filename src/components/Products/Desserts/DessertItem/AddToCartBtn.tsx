@@ -12,7 +12,7 @@ export default function AddToCartBtn({ name, price }: CartBtnProps) {
       className={addToCartBtnStyle}
       onClick={() => cartDispatch && cartDispatch({ type: "addItem", cartItem: { name, amount: 1, price } })}
     >
-      <img src={addToCart} />
+      <img src={addToCart} alt="Cart drawing with a plus sign" />
       <span>Add to Cart</span>
     </button>
   );
