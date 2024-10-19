@@ -24,7 +24,7 @@ export default function CartContent() {
       <div className={note}>
         <img src={carbonNeutral} alt="Icon for signifying carbon-neutral" />
         <p>
-          This is a <span>carbon-neutral</span> delivery
+          This is a <mark>carbon-neutral</mark> delivery
         </p>
       </div>
       <ConfirmOrderBtn />
@@ -43,7 +43,8 @@ const note = css`
   p {
     color: ${rose900};
 
-    span {
+    mark {
+      background-color: transparent;
       font-family: "Red hat semi-bold";
     }
   }
